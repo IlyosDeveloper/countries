@@ -2,13 +2,17 @@ import express from "express";
 import dotenv from "dotenv";
 import axios from "axios";
 import countryRouter from "./src/controller/counties.controller.js";
-import Country from "./src/modules/countries.module.js";
+// import Country from "./src/modules/countries.module.js";
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use("/country", countryRouter);
-
+app.use('/', (req, res) => {
+  res.send(`
+  https://countries-g9kp.onrender.com/country-all
+  `);
+})
 // let data = [];
 // try {
 //   data = await axios("https://restcountries.com/v3.1/all").then((res) =>
