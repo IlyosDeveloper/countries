@@ -9,8 +9,10 @@ const app = express();
 app.use(express.json());
 app.use("/country", countryRouter);
 app.use('/', (req, res) => {
+  // res.set( 'Content-type', 'text/html' )
+  res.setHeader("Content-Type", "text/html");
   res.send(`
-  https://countries-g9kp.onrender.com/country-all
+  < href="https://countries-g9kp.onrender.com/country">https://countries-g9kp.onrender.com/country</a>
   `);
 })
 // let data = [];
