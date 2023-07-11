@@ -13,6 +13,9 @@ app.use('/', (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.send(`
   <a href="https://countries-g9kp.onrender.com/country">https://countries-g9kp.onrender.com/country</a>
+  <p>For all countries ☝️</p>
+  <p>For one country 👇</p>
+  <a href="https://countries-g9kp.onrender.com/country/name/Uzbekistan">https://countries-g9kp.onrender.com/country/name/Uzbekistan</a>
   `);
 })
 // let data = [];
